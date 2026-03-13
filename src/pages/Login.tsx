@@ -122,10 +122,10 @@ const Login = () => {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="h-12 w-12 rounded-lg bg-gradient-gold flex items-center justify-center font-bold text-primary-foreground">
-              AB
+              TA
             </div>
             <span className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-              AutoBarber
+              Trix Agenda
             </span>
           </div>
           <h1 className="text-3xl font-bold mb-2">Bem-vindo de volta</h1>

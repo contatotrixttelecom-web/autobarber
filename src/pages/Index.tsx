@@ -39,10 +39,10 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-10 w-10 rounded-lg bg-gradient-gold flex items-center justify-center font-bold text-primary-foreground">
-              AB
+              TA
             </div>
             <span className="text-xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-              AutoBarber
+              Trix Agenda
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -387,7 +387,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© 2026 AutoBarber. Desenvolvido pela GsTecnologgy.</p>
+          <p>© 2026 TrixAgenda. Desenvolvido pela TrixSistemas.</p>
         </div>
       </footer>
     </div>
