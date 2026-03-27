@@ -8,27 +8,21 @@ import { supabase } from "@/integrations/supabase/client";
 import { features } from "process";
 
 const PLANS = {
-  basic: {
-    name: "Basic",
-    price: 27,
-    features: ["Entrada Direta", "Controle Financeiro", "1 Barbeiro"],
-    priceId: import.meta.env.VITE_STRIPE_PRICE_BASIC
-  },
   starter: { 
     name: "Starter", 
-    price: 37, 
+    price: 49, 
     features: ["Entrada Direta", "Controle Financeiro", "Até 5 Barbeiro"],
     priceId: import.meta.env.VITE_STRIPE_PRICE_STARTER
   },
   pro: { 
     name: "Pro", 
-    price: 57, 
+    price: 69, 
     features: ["Agendamento Online", "Link Personalizado", "Lembretes", "1 Barbeiro"],
     priceId: import.meta.env.VITE_STRIPE_PRICE_PRO
   },
   master: { 
     name: "Master", 
-    price: 97, 
+    price: 147, 
     features: ["Até 5 Barbeiros", "Gestão de Equipe", "Relatórios Avançados"],
     priceId: import.meta.env.VITE_STRIPE_PRICE_MASTER
   },
@@ -139,14 +133,18 @@ const handleSignup = async (e: React.FormEvent) => {
     <div className="min-h-screen bg-gradient-dark flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <div className="h-12 w-12 rounded-lg bg-gradient-gold flex items-center justify-center font-bold text-primary-foreground">
-              AB
-            </div>
-            <span className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-              AutoBarber
-            </span>
-          </div>
+          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <img 
+                src="src/media/trixAgenda.png" 
+                alt="logo" 
+                style={{ maxWidth: '5em', height: 'auto' }} 
+              />
+              <span className="text-xl font-bold ">
+                 Trix Agenda
+              </span>
+         </div>
+         </div>
           <h1 className="text-3xl font-bold mb-2">Crie sua conta</h1>
           <p className="text-muted-foreground">Comece a automatizar sua barbearia hoje</p>
         </div>
@@ -205,7 +203,7 @@ const handleSignup = async (e: React.FormEvent) => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="barberName">Seu Nome</Label>
+              <Label htmlFor="barberName">Nome Completo</Label>
               <Input
                 id="barberName"
                 placeholder="João Silva"
@@ -229,7 +227,7 @@ const handleSignup = async (e: React.FormEvent) => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">Email Profissional</Label>
               <Input
                 id="email"
                 type="email"
@@ -240,6 +238,7 @@ const handleSignup = async (e: React.FormEvent) => {
                 className="bg-background"
               />
             </div>
+
 
             <div className="space-y-2">
               <Label htmlFor="password">Senha</Label>

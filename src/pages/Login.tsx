@@ -120,14 +120,19 @@ const Login = () => {
     <div className="min-h-screen bg-gradient-dark flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <div className="h-12 w-12 rounded-lg bg-gradient-gold flex items-center justify-center font-bold text-primary-foreground">
-              TA
-            </div>
-            <span className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-              Trix Agenda
-            </span>
-          </div>
+          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <img 
+                src="src/media/trixAgenda.png" 
+                alt="logo" 
+                style={{ maxWidth: '5em', height: 'auto' }} 
+              />
+
+              <span className="text-xl font-bold ">
+                 Trix Agenda
+              </span>
+         </div>
+         </div>
           <h1 className="text-3xl font-bold mb-2">Bem-vindo de volta</h1>
           <p className="text-muted-foreground">Entre na sua conta para continuar</p>
         </div>

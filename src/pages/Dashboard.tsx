@@ -213,14 +213,19 @@ useEffect(() => {
         <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="h-10 w-10 rounded-lg bg-gradient-gold flex items-center justify-center font-bold text-primary-foreground">
-                  AB
-                </div>
-                <span className="text-xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-                  AutoBarber
-                </span>
-              </div>
+              <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <img 
+                src="src/media/trixAgenda.png" 
+                alt="logo" 
+                style={{ maxWidth: '5em', height: 'auto' }} 
+              />
+
+              <span className="text-xl font-bold ">
+                 Trix Agenda
+              </span>
+         </div>
+         </div>
               <div className="flex items-center gap-4">
                 <span className="text-sm text-muted-foreground hidden sm:block">
                   {fullName || user?.email}
@@ -258,7 +263,7 @@ useEffect(() => {
           <div className="mb-8 flex items-center justify-between">
             <div>
               <h1 className="text-4xl font-bold mb-2">
-                Olá, <span className="text-primary">{fullName || "Barbeiro"}</span>
+                Olá, {fullName || "Barbeiro"}
               </h1>
               <p className="text-muted-foreground">
                 {isBarber

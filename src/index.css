@@ -2,56 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ── Trix Agenda — Color System ────────────────────────────────── */
+/* Preto Navy    : #043756              HSL 210 97% 12%            */
+/* Azul Escuro   : #025D7A  R:2 G:93 B:122  HSL 195 97% 24%       */
+/* Azul Claro    : #00DDFA              HSL 188 100% 49%           */
+/* Cinza         : #ECECEC              HSL 0 0% 93%               */
+/* ──────────────────────────────────────────────────────────────── */
 
 @layer base {
   :root {
-    /* AutoBarber - Premium Black & Gold Theme */
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
+    /* ── Base ── */
+    --background:         210 97% 12%;   /* #043756 */
+    --foreground:         0 0% 93%;      /* #ECECEC */
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    /* ── Card / Popover ── */
+    --card:               210 97% 9%;
+    --card-foreground:    0 0% 93%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover:            210 97% 9%;
+    --popover-foreground: 0 0% 93%;
 
-    /* Gold accent as primary */
-    --primary: 45 100% 51%;
-    --primary-foreground: 0 0% 7%;
+    /* ── Primary — Azul Escuro #025D7A ── */
+    --primary:            195 97% 24%;   /* #025D7A  R:2 G:93 B:122 */
+    --primary-foreground: 0 0% 93%;      /* #ECECEC sobre fundo escuro */
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    /* ── Secondary — Azul Claro #00DDFA ── */
+    --secondary:          188 100% 49%;  /* #00DDFA */
+    --secondary-foreground: 210 97% 8%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
+    /* ── douradary — Dourado #00DDFA ── */
+    --douradary: 255 87% 33%;
 
-    --accent: 45 100% 51%;
-    --accent-foreground: 0 0% 7%;
+    /* ── Muted ── */
+    --muted:              210 40% 18%;
+    --muted-foreground:   0 0% 65%;
 
-    --destructive: 0 84% 60%;
+    /* ── Accent — Azul Claro #00DDFA ── */
+    --accent:             188 100% 49%;  /* #00DDFA */
+    --accent-foreground:  210 97% 8%;
+
+    /* ── Destructive ── */
+    --destructive:        0 72% 51%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 45 100% 51%;
+    /* ── Border / Input / Ring ── */
+    --border:             195 40% 22%;
+    --input:              195 40% 22%;
+    --ring:               195 97% 24%;   /* #025D7A */
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom design tokens */
-    --gold: 45 100% 51%;
-    --gold-light: 45 100% 65%;
-    --gold-dark: 45 100% 40%;
-    
-    --gradient-gold: linear-gradient(135deg, hsl(200, 92%, 44%), hsl(230, 88%, 26%));
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 10%));
-    
-    --shadow-gold: 0 10px 40px -10px hsl(0, 0%, 29%);
-    --shadow-strong: 0 20px 60px -15px hsl(0 0% 0% / 0.8);
-    
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* ── Sidebar ── */
+    --sidebar-background:           210 97% 8%;
+    --sidebar-foreground:           0 0% 93%;
+    --sidebar-primary:              195 97% 24%;
+    --sidebar-primary-foreground:   0 0% 93%;
+    --sidebar-accent:               195 40% 16%;
+    --sidebar-accent-foreground:    0 0% 93%;
+    --sidebar-border:               195 40% 18%;
+    --sidebar-ring:                 195 97% 24%;
+  }
+
+  .dark {
+    --background:         210 97% 12%;
+    --foreground:         0 0% 93%;
+    --card:               210 97% 9%;
+    --card-foreground:    0 0% 93%;
+    --popover:            210 97% 9%;
+    --popover-foreground: 0 0% 93%;
+    --primary:            195 97% 24%;
+    --primary-foreground: 0 0% 93%;
+    --secondary:          188 100% 49%;
+    --secondary-foreground: 210 97% 8%;
+    --muted:              210 40% 18%;
+    --muted-foreground:   0 0% 65%;
+    --accent:             188 100% 49%;
+    --accent-foreground:  210 97% 8%;
+    --destructive:        0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border:             195 40% 22%;
+    --input:              195 40% 22%;
+    --ring:               195 97% 24%;
+    --sidebar-background:           210 97% 8%;
+    --sidebar-foreground:           0 0% 93%;
+    --sidebar-primary:              195 97% 24%;
+    --sidebar-primary-foreground:   0 0% 93%;
+    --sidebar-accent:               195 40% 16%;
+    --sidebar-accent-foreground:    0 0% 93%;
+    --sidebar-border:               195 40% 18%;
+    --sidebar-ring:                 195 97% 24%;
   }
 }
 
@@ -59,23 +98,62 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+@layer utilities {
+
+  /* Trix gradient: #025D7A → #00DDFA */
+  .bg-gradient-trix {
+    background: linear-gradient(135deg, #025D7A 0%, #00DDFA 100%);
+  }
+
+  /* Dark Navy background */
+  .bg-gradient-dark {
+    background: linear-gradient(160deg, #043756 0%, #02293d 60%, #011828 100%);
+  }
+
+  /* Trix brand text gradient */
+  .bg-gradient-trix-text {
+    background: linear-gradient(90deg, #025D7A 0%, #00DDFA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Legacy aliases para compatibilidade */
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, #025D7A 0%, #00DDFA 100%);
+  }
+
+  /* Glow usando #025D7A = rgba(2, 93, 122) */
+  .shadow-trix {
+    box-shadow: 0 0 24px 0 rgba(2, 93, 122, 0.40);
+  }
+  .shadow-gold {
+    box-shadow: 0 0 24px 0 rgba(2, 93, 122, 0.40);
+  }
+  .shadow-strong {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.50);
+  }
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to   { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to   { height: 0; }
+  }
+  @keyframes caret-blink {
+    0%, 70%, 100% { opacity: 1; }
+    20%, 50%      { opacity: 0; }
+  }
+
+  .animate-accordion-down { animation: accordion-down 0.2s ease-out; }
+  .animate-accordion-up   { animation: accordion-up   0.2s ease-out; }
+  .animate-caret-blink    { animation: caret-blink    1.25s ease-out infinite; }
 }

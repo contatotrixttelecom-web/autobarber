@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Calendar, MessageSquare, TrendingUp } from "lucide-react";
+import { ArrowRight, CheckCircle2, Calendar, MessageSquare, TrendingUp, Weight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -37,14 +37,19 @@ const Index = () => {
       {/* Header */}
       <header className="border-b border-border/50 backdrop-blur-sm bg-background/50 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="h-10 w-10 rounded-lg bg-gradient-gold flex items-center justify-center font-bold text-primary-foreground">
-              TA
-            </div>
-            <span className="text-xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-              Trix Agenda
-            </span>
-          </div>
+          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <img 
+                src="src/media/trixAgenda.png" 
+                alt="logo" 
+                style={{ maxWidth: '5em', height: 'auto' }} 
+              />
+
+              <span className="text-xl font-bold ">
+                 Trix Agenda
+              </span>
+         </div>
+         </div>
           <div className="flex items-center gap-4">
             <Button variant="ghost" onClick={() => navigate("/login")}>
               Entrar
@@ -65,7 +70,7 @@ const Index = () => {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Agenda cheia
             <br />
-            <span className="bg-gradient-gold bg-clip-text text-transparent">
+            <span className="bg-gradient-gold">
               sem dor de cabeça
             </span>
           </h1>
@@ -166,51 +171,6 @@ const Index = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-          {/* Plano Basic */}
-          <div className="bg-card border border-border rounded-2xl p-8 hover:border-primary/50 transition-all">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-2">Basic</h3>
-              <p className="text-muted-foreground text-sm mb-4">
-                Para quem quer controle financeiro
-              </p>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-primary">R$ 27</span>
-                <span className="text-muted-foreground">/mês</span>
-              </div>
-            </div>
-            
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Entrada Direta (Walk-in)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Controle financeiro completo</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Relatórios e métricas</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">1 barbeiro</span>
-              </li>
-              <li className="flex items-start gap-2 opacity-50">
-                <span className="h-5 w-5 flex-shrink-0 mt-0.5">❌</span>
-                <span className="text-sm line-through">Agendamento online</span>
-              </li>
-            </ul>
-
-            <Button 
-              className="w-full"
-              variant="outline"
-              onClick={() => navigate("/signup?plan=starter")}
-            >
-              Começar com Basic
-            </Button>
-          </div>
-
           {/* Plano Starter */}
           <div className="bg-card border border-border rounded-2xl p-8 hover:border-primary/50 transition-all">
             <div className="text-center mb-6">
@@ -219,7 +179,7 @@ const Index = () => {
                 Para quem quer controle financeiro e gerenciar sua equipe
               </p>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-primary">R$ 37</span>
+                <span className="text-4xl font-bold text-primary">R$ 49</span>
                 <span className="text-muted-foreground">/mês</span>
               </div>
             </div>
@@ -239,7 +199,7 @@ const Index = () => {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Até 5 barbeiro</span>
+                <span className="text-sm">Até 2 barbeiro</span>
               </li>
               <li className="flex items-start gap-2 opacity-50">
                 <span className="h-5 w-5 flex-shrink-0 mt-0.5">❌</span>
@@ -268,7 +228,7 @@ const Index = () => {
                 Para barbearias solo
               </p>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-primary">R$ 57</span>
+                <span className="text-4xl font-bold text-primary">R$ 69</span>
                 <span className="text-muted-foreground">/mês</span>
               </div>
             </div>
@@ -294,10 +254,6 @@ const Index = () => {
                 <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm">Sistema anti-faltas</span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">1 barbeiro</span>
-              </li>
             </ul>
 
             <Button 
@@ -316,7 +272,7 @@ const Index = () => {
                 Para barbearias com equipe
               </p>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-primary">R$ 97</span>
+                <span className="text-4xl font-bold text-primary">R$ 147</span>
                 <span className="text-muted-foreground">/mês</span>
               </div>
             </div>
@@ -345,6 +301,10 @@ const Index = () => {
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm">Suporte prioritário</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="h-5 w-5 text-dourad flex-shrink-0 mt-0.5" />
+                <span className="text-sm">Agente de IA no WhatsApp</span>
               </li>
             </ul>
 

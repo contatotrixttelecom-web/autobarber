@@ -26,6 +26,7 @@ import AcceptInvite from "./pages/dashboard/AcceptInvite";
 import Product from "./pages/dashboard/Product";
 import Stock from "./pages/dashboard/Stock";
 import Statistics from "./pages/dashboard/statistics";
+import AdminPanel from "@/pages/AdminPanel";
 
 // Páginas de Clientes
 import ClientsManagement from "./pages/dashboard/Clients";
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/confirm-email" element={<ConfirmEmail />} />
           <Route path="/update-password" element={<UpdatePassword />} />
+          <Route path="/trix-admin" element={<AdminPanel />} />
           
           
           {/* 🔐 Rotas de Cliente*/}
