@@ -39,7 +39,7 @@ export default function ForgotPassword() {
               AB
             </div>
             <span className="text-2xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-              AutoBarber
+              Trix Agenda
             </span>
           </div>
           <h1 className="text-3xl font-bold mb-2">Redefinir Senha</h1>

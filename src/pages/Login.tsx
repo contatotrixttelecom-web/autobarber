@@ -97,7 +97,7 @@ const Login = () => {
 
       toast({
         title: "Login realizado!",
-        description: "Bem-vindo de volta ao AutoBarber",
+        description: "Bem-vindo de volta ao Trix Agenda",
       });
 
       navigate("/dashboard");

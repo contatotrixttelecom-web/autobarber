@@ -403,7 +403,7 @@ const SettingsPage = () => {
             <div className="container mx-auto px-4 py-3 max-w-2xl">
               <Alert variant="destructive">
                 <AlertDescription>
-                  ⚠️ Sua assinatura expirou. Renove para continuar usando o AutoBarber.
+                  ⚠️ Sua assinatura expirou. Renove para continuar usando o Trix Agenda.
                 </AlertDescription>
               </Alert>
               <Button
