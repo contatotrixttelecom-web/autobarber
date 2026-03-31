@@ -35,7 +35,7 @@ const AcceptInvite = () => {
     whatsapp: "",
   });
 
-  useEffect(() => {
+  useEffect(() => { 
     checkInvite();
   }, [token]);
 
